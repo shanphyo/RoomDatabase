@@ -38,13 +38,13 @@ class viewFragment : Fragment(),SwipeRefreshLayout.OnRefreshListener, menuSwipCl
 
 
         productViewModel= ViewModelProvider(this).get(ProductViewModel::class.java)
-        productViewModel.getLimitProduct(0,2)
+        productViewModel.getLimitProduct(0,5)
         productViewModel.allProduct.observe(
             viewLifecycleOwner, Observer {
                     cdlist->cdlist?.let {
                 if(it.isEmpty()){
                     productViewModel.addData()
-                    productViewModel.getLimitProduct(0,2)
+                    productViewModel.getLimitProduct(0,5)
                 }else{
                     count++
                     menuAdapter.updateMenuslist(it)
@@ -89,7 +89,7 @@ class viewFragment : Fragment(),SwipeRefreshLayout.OnRefreshListener, menuSwipCl
     }
 
     override fun onRefresh() {
-        readData( 0,2*count)
+        readData( 0,5*count)
     }
     fun readData(start:Int,end:Int){
         productViewModel.getLimitProduct(start,end)

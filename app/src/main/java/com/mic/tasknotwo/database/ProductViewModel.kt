@@ -44,7 +44,7 @@ class ProductViewModel (application: Application):AndroidViewModel(application){
             p.productName=i.toString()
             p.productPrice=9.9
             p.productQuality="Good"
-            p.productImg="https://uploads-ssl.webflow.com/5d556af3fe21d65f602dca94/5de6b00d4d802a000e49b537_eOD15DbonZj4.jpeg"
+            p.productImg="https://yourmileagemayvary.net/wp-content/uploads/2019/04/Screen-Shot-2019-04-10-at-5.44.04-PM.png"
             insert(p)
         }
     }

@@ -22,7 +22,7 @@ class MenusAdapter(var rd:menuSwipClick) :RecyclerView.Adapter<MenusAdapter.Menu
             itemView.txt_menuprice.text=result.productPrice.toString()+" MMK for each"
             Picasso.get()
                 .load(result.productImg)
-                .placeholder(R.drawable.ic_launcher_background)
+                .placeholder(R.drawable.food)
                 .into(itemView.img_menupic)
 
             itemView.item_card.setOnClickListener {

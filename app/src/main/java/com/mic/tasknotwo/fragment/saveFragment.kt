@@ -6,19 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.activity.addCallback
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import com.mic.tasknotwo.Constant
 import com.mic.tasknotwo.Product
 import com.mic.tasknotwo.ProductViewModel
 import com.mic.tasknotwo.R
 import kotlinx.android.synthetic.main.fragment_save.*
 import kotlinx.android.synthetic.main.fragment_save.view.*
-import kotlinx.android.synthetic.main.item_menu.view.*
 
 class saveFragment : Fragment() {
     private lateinit var productViewModel: ProductViewModel
